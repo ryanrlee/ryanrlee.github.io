@@ -1,17 +1,26 @@
-# Example Site settings
+title: 'Ryan Lee'
+description: ""
+baseurl: ""
+url: "https://ryanrlee.github.io"
 
-#header_pages:
-#  - index.md
-#  - about.md
+header_pages:
+  - index.md
+  - resume.md
+  - projects.md
+  - contact.md
 
-#footer: 'follow us on <a href="https://twitter.com/">twitter</a>'
+# Theme options
+style: nord
+
+# Build settings
+markdown: kramdown
+
+# Author settings
+author:
+  name: "Ryan Lee"
 
 plugins:
   - jekyll-seo-tag
-
-# Theme options
-# style: dark # dark (default) or light or hacker
-# listen_for_clients_preferred_style: true # true or false (default)
 
 # Fonts
 # disable_google_fonts: false # set true to prevent loading fonts.googleapis.com
