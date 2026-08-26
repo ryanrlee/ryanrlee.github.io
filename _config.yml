@@ -23,7 +23,7 @@ plugins:
   - jekyll-seo-tag
 
 # Fonts
-# disable_google_fonts: false # set true to prevent loading fonts.googleapis.com
+disable_google_fonts: true # set true to prevent loading fonts.googleapis.com
 
 # Tracking (generic, optional; loads only in production)
 # tracking:
