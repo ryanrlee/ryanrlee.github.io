@@ -21,6 +21,7 @@ p, ul, ol { margin: 0px;  color: var(--text-color); }
 .proj { font-size: 0.9em; }
 a { text-decoration: none;  color: var(--link-color); }
 a:hover { color: var(--background-color); background-color: var(--base-color); }
+img { max-width: 100%;  height: auto; }
 
 .link-button {
 	display: inline-block;
@@ -46,7 +47,7 @@ a:hover { color: var(--background-color); background-color: var(--base-color); }
 	color: color-mix(in srgb, var(--base-color) 50%, var(--link-color) 50%);
 }
 
-@media only screen and (max-device-width: 500px) { * { font-size: $mobile-font-size !important; } }
+@media only screen and (max-device-width: 500px) { body { font-size: $mobile-font-size; } }
 
 /**
  * Layout
