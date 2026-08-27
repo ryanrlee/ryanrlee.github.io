@@ -1,5 +1,5 @@
 ---
-title: Harmonizer | Ryan Lee
+title: Live Harmonizer | Ryan Lee
 layout: page
 permalink: /projects/harmonizer/
 mermaid: true
@@ -16,8 +16,8 @@ mermaid: true
 <a class="link-button" href="https://github.com/ryanrlee/live-harmonizer" target="_blank" rel="noopener noreferrer">View GitHub Repo</a>
 
 When creating musical ideas, it is often hard to concepualize the full scope of harmonies and rhythms when working alone. Having new background ideas availble in real-time greatly expands the freedom and flexibility musicians have when demoing and/or tinkering with ideas, even with just a single instrument or voice. This project aims to create a real-time system that can take a live audio signal from any instrument and generate real-time harmonies through MIDI.
-</p>
 
+</p>
 
 ## Demo
 
@@ -26,7 +26,6 @@ When creating musical ideas, it is often hard to concepualize the full scope of 
     <img src="{{ '/assets/media/harmonizer_demo_img.png' | relative_url }}" style="margin-bottom: -5px;">
 </a>
 </div>
-
 
 ## System Pipeline
 
@@ -56,7 +55,7 @@ flowchart TB
     direction LR
 	    D --> E --> F
     end
-    
+  
     detect -- pass - send over OSC --> harmonize
 
     style A fill:none,stroke:none
@@ -94,7 +93,6 @@ flowchart LR
 Notochord is a real-time neural network model for MIDI performances developed by the Intelligent Instruments Lab. It was designed utilizing autoregression and probabilistic formulations to allow for extreme low-latency performance usage. The MIDI data recieved from torchcrepe is run through this predictive model to determine a harmonized note. The model outputs the MIDI representation of its predicted note, which is then routed through to a DAW/software synthesize to be played aloud.
 </p>
 
-
 ## Latency?
 
 <div class="proj" style="margin-top: 10px; margin-bottom: 15px">
@@ -106,7 +104,6 @@ Latency was one of the main focuses in trying to get this system to work for liv
 <div class="proj" style="margin-top: 10px; margin-bottom: 35px;">
 Surprisingly, the Notochord latency is the lowest at ~15ms, with torchcrepe at ~42ms & OSC at ~47ms. With the communication protocol being the largest bottleneck, an improvement in latency is very achievable just by altering the component structure.
 </div>
-
 
 ## Testing Harmonization
 
@@ -124,13 +121,11 @@ Notochord works as a predictive model, indicating that it will make more informe
 As evident in the video, the harmonization gradually becomes more tonal and standardized to what we would expect the chord outline to be from a Western musical perspective. There are many more parameters and variations on Notochord to try and tweak, which is a goal for the near future.
 </div>
 
-
 ## Musician's POV
 
 <div class="proj" style="margin-top: 10px; margin-bottom: 35px">
 As a percussionist and overall musician, I chose this project route as I love discovering new technologies to enhance live performance. In its current interation, however, it has its shortcomings when trying to utilize it with real, live music. The latency is a bit too much to be useful for anything other than slow chorales and the harmonization is oftentimes seemingly random and nonsensical. Despite this, I believe that this idea still has some life in terms of live peformance, as these two main issues can easily be tinkered and resolved, as explained in the earlier sections. 
 </div>
-
 
 ## Future Improvements
 
